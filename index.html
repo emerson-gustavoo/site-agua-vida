@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AquaVida Natação - Mergulhe na sua melhor versão</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    :root { --azul: #0077B6; --agua: #90E0EF; }
+    .bg-azul { background-color: var(--azul); }
+    .text-azul { color: var(--azul); }
+    .btn-azul { background-color: var(--azul); color: #fff; }
+    .btn-azul:hover { background-color: #005f92; color: #fff; }
+    .carousel-img { object-fit: cover; height: 60vh; min-height: 320px; width: 100%; }
+    .card-img-top { object-fit: cover; height: 220px; }
+    .depoimento-foto { width: 72px; height: 72px; object-fit: cover; }
+    .post-img { max-height: 460px; }
+    .whats-flutuante {
+      position: fixed; bottom: 24px; right: 24px; z-index: 1050;
+      width: 60px; height: 60px; font-size: 2rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- MENU PRINCIPAL -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-azul sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-water me-2"></i>AquaVida Natação</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#catalogo">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#empresa">A Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">Dúvidas</a></li>
+        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CARROSSEL DE DESTAQUES -->
+<div id="carrosselDestaques" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/bebes-01.jpg" class="d-block carousel-img" alt="Bebê nadando na piscina">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+        <h2>Natação para Bebês</h2>
+        <p>Matrículas abertas! Primeira aula experimental gratuita para bebês a partir de 6 meses.</p>
+        <a href="servico1.html" class="btn btn-azul">Saiba mais</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/adultos-01.jpg" class="d-block carousel-img" alt="Adulto nadando crawl">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+        <h2>Natação para Adultos</h2>
+        <p>Promoção: 20% de desconto na primeira mensalidade para novos alunos.</p>
+        <a href="servico2.html" class="btn btn-azul">Saiba mais</a>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/hidro-01.jpg" class="d-block carousel-img" alt="Turma de hidroginástica">
+      <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-3">
+        <h2>Hidroginástica</h2>
+        <p>Turmas da manhã com vagas! Saúde e bem-estar sem impacto nas articulações.</p>
+        <a href="servico3.html" class="btn btn-azul">Saiba mais</a>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+
+<!-- CATÁLOGO DE SERVIÇOS -->
+<section id="catalogo" class="py-5">
+  <div class="container">
+    <h2 class="text-azul mb-2"><i class="bi bi-list-stars me-2"></i>Nossos Serviços</h2>
+    <p class="mb-4">Turmas reduzidas, piscinas aquecidas e professores certificados. Escolha a modalidade ideal para você e solicite um orçamento.</p>
+    <div class="row g-4">
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/bebes-01.jpg" class="card-img-top" alt="Natação para bebês">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Natação para Bebês</h5>
+            <p class="card-text">Adaptação ao meio aquático de 6 meses a 3 anos, com pai ou mãe na água. Piscina rasa aquecida a 32°C.</p>
+            <p class="fs-4 fw-bold text-azul mb-3">R$ 189,90<small class="fs-6 fw-normal text-muted">/mês</small></p>
+            <a href="servico1.html" class="btn btn-azul mt-auto"><i class="bi bi-calculator me-1"></i>Solicitar orçamento</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/adultos-01.jpg" class="card-img-top" alt="Natação para adultos">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Natação para Adultos</h5>
+            <p class="card-text">Do primeiro contato com a água ao aperfeiçoamento dos quatro nados. Turmas por nível, do iniciante ao avançado.</p>
+            <p class="fs-4 fw-bold text-azul mb-3">R$ 169,90<small class="fs-6 fw-normal text-muted">/mês</small></p>
+            <a href="servico2.html" class="btn btn-azul mt-auto"><i class="bi bi-calculator me-1"></i>Solicitar orçamento</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img/hidro-01.jpg" class="card-img-top" alt="Hidroginástica">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">Hidroginástica</h5>
+            <p class="card-text">Exercícios aeróbicos e de fortalecimento na água, sem impacto. Ideal para idosos, gestantes e reabilitação.</p>
+            <p class="fs-4 fw-bold text-azul mb-3">R$ 149,90<small class="fs-6 fw-normal text-muted">/mês</small></p>
+            <a href="servico3.html" class="btn btn-azul mt-auto"><i class="bi bi-calculator me-1"></i>Solicitar orçamento</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- A EMPRESA -->
+<section id="empresa" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-azul mb-4"><i class="bi bi-building me-2"></i>AquaVida Natação</h2>
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-lg-6">
+        <img src="img/logo.png" alt="Logomarca AquaVida Natação" class="img-fluid mb-3" style="max-width: 260px;">
+        <p>A AquaVida Natação nasceu em 2015, em Chapecó (SC), do sonho de dois professores de Educação Física apaixonados pelo esporte aquático. A primeira sede tinha uma única piscina e três turmas. Hoje são duas piscinas aquecidas, mais de 600 alunos por mês e uma equipe referência no ensino de natação no Oeste catarinense.</p>
+        <p>Nossa missão é transformar vidas por meio da água, ensinando natação com segurança, técnica e acolhimento para pessoas de todas as idades, do bebê de 6 meses ao adulto que decidiu vencer o medo da água.</p>
+        <p class="mb-1"><i class="bi bi-geo-alt-fill text-azul me-2"></i><strong>Endereço:</strong> Av. Nereu Ramos, 3777-D, Bairro Seminário</p>
+        <p class="mb-1 ms-4">CEP 89813-000, Chapecó / SC</p>
+        <p class="ms-4"><i class="bi bi-clock text-azul me-2"></i>Segunda a sexta, 6h às 22h. Sábados, 8h às 12h</p>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="ratio ratio-4x3 rounded shadow-sm overflow-hidden">
+          <iframe src="https://www.google.com/maps?q=Av.+Nereu+Ramos,+3777-D,+Seminário,+Chapecó,+SC&output=embed"
+                  title="Localização da AquaVida Natação no Google Maps"
+                  allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="py-5">
+  <div class="container">
+    <h2 class="text-azul mb-4"><i class="bi bi-chat-quote me-2"></i>Depoimentos de Alunos</h2>
+    <div class="row g-4">
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"Minha filha começou na turma de bebês com 8 meses e hoje, com 4 anos, já nada sozinha. A paciência e o carinho da professora Camila fizeram toda a diferença!"</p>
+          </div>
+          <div class="card-footer bg-white d-flex align-items-center gap-3">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle depoimento-foto" alt="Foto de Fernanda Baldissera">
+            <div>
+              <strong>Fernanda Baldissera</strong><br>
+              <small class="text-muted">Mãe de aluna, turma bebês</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"Tinha 42 anos e nunca tinha conseguido nadar. Em 6 meses de aula na AquaVida aprendi crawl e costas, e hoje nado 1.500 metros por treino."</p>
+          </div>
+          <div class="card-footer bg-white d-flex align-items-center gap-3">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle depoimento-foto" alt="Foto de Marcos Antônio Dallagnol">
+            <div>
+              <strong>Marcos Antônio Dallagnol</strong><br>
+              <small class="text-muted">Aluno, natação adulto</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"Faço hidroginástica três vezes por semana desde 2023. Minhas dores no joelho diminuíram muito e ganhei uma turma de amigas. Ambiente limpo, aquecido e professores atenciosos."</p>
+          </div>
+          <div class="card-footer bg-white d-flex align-items-center gap-3">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle depoimento-foto" alt="Foto de Ilse Marlene Kruger">
+            <div>
+              <strong>Ilse Marlene Kruger</strong><br>
+              <small class="text-muted">Aluna, hidroginástica</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"Meu filho de 5 anos tinha pavor de água. Em poucos meses ele já pedia pra chegar mais cedo na aula. A metodologia deles respeita o ritmo de cada criança."</p>
+          </div>
+          <div class="card-footer bg-white d-flex align-items-center gap-3">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" class="rounded-circle depoimento-foto" alt="Foto de Jandir Costella">
+            <div>
+              <strong>Jandir Costella</strong><br>
+              <small class="text-muted">Pai de aluno, natação infantil</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <p class="card-text">"Sou gestante e a hidroginástica da AquaVida foi recomendação da minha médica. As professoras adaptam todos os exercícios. Me sinto segura e muito bem cuidada."</p>
+          </div>
+          <div class="card-footer bg-white d-flex align-items-center gap-3">
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" class="rounded-circle depoimento-foto" alt="Foto de Patrícia Zanella">
+            <div>
+              <strong>Patrícia Zanella</strong><br>
+              <small class="text-muted">Aluna, hidroginástica para gestantes</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ (ACCORDION) -->
+<section id="faq" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-azul mb-4"><i class="bi bi-question-circle me-2"></i>Dúvidas Frequentes</h2>
+    <div class="accordion" id="accordionFaq">
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+            A partir de que idade meu filho pode começar a nadar?
+          </button>
+        </h3>
+        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
+          <div class="accordion-body">A partir dos 6 meses, com a imunização básica em dia e liberação do pediatra. Na turma de bebês, o pai ou a mãe participa da aula dentro da água.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+            Nunca nadei na vida. Consigo aprender adulto?
+          </button>
+        </h3>
+        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+          <div class="accordion-body">Com certeza! Temos turmas específicas para adultos iniciantes, começando pela adaptação e respiração. A maioria dos alunos nada com autonomia em poucos meses.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+            O que preciso levar para a primeira aula?
+          </button>
+        </h3>
+        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+          <div class="accordion-body">Traje de banho, touca, chinelo e toalha. Óculos de natação são recomendados a partir da turma infantil. A primeira aula experimental é gratuita!</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h3 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+            A piscina é aquecida o ano todo?
+          </button>
+        </h3>
+        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+          <div class="accordion-body">Sim! Nossas duas piscinas são aquecidas o ano inteiro (32°C na piscina de bebês) e tratadas com sistema de ozônio, mais suave para a pele e as vias respiratórias.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog" class="py-5">
+  <div class="container">
+    <h2 class="text-azul mb-2"><i class="bi bi-journal-text me-2"></i>Blog</h2>
+    <p class="mb-4">Histórias, ciência e dicas sobre natação, escritas pela nossa própria equipe de professores.</p>
+    <div class="row g-4">
+
+      <div class="col-12">
+        <article class="card shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-12 col-md-5 col-lg-4 bg-light d-flex align-items-center justify-content-center p-3">
+              <img src="img/post1-phelps.png" class="img-fluid rounded post-img" alt="Michael Phelps com suas medalhas olímpicas ao lado da frase: você não pode colocar um limite em nada, quanto mais você sonha, mais longe você chega">
+            </div>
+            <div class="col-12 col-md-7 col-lg-8">
+              <div class="card-body h-100 d-flex flex-column">
+                <h3 class="card-title h4 text-azul">A lição de Michael Phelps: na piscina, quem sonha grande chega mais longe</h3>
+                <p class="text-muted small mb-3">
+                  <i class="bi bi-person-circle me-1"></i>Por <strong>Ricardo Fontana</strong>
+                  <i class="bi bi-calendar-event ms-3 me-1"></i>10/08/2026 às 09h30
+                </p>
+                <p class="card-text">Michael Phelps é o maior medalhista da história dos Jogos Olímpicos: são 28 medalhas, sendo 23 de ouro, conquistadas entre Atenas 2004 e Rio 2016, um feito que nenhum outro atleta, de qualquer esporte, chegou perto de igualar. Mas o que pouca gente lembra é como tudo começou: Phelps entrou na natação aos 7 anos, incentivado pela mãe, como forma de canalizar a energia do TDAH diagnosticado na infância. A piscina, que era um escape, virou disciplina, e a disciplina virou história.</p>
+                <p class="card-text">A frase do nadador que ilustra este post resume sua filosofia: não coloque limites nos próprios sonhos, porque é o tamanho deles que define até onde você chega. Em Pequim 2008, esse pensamento se materializou em oito medalhas de ouro numa única edição dos Jogos, quebrando o recorde que resistia desde 1972. E depois de se aposentar, Phelps deu ao esporte uma contribuição talvez ainda maior: falou abertamente sobre depressão e virou uma das principais vozes na defesa da saúde mental dos atletas.</p>
+                <p class="card-text">Aqui na AquaVida a gente acredita na mesma ideia. Ninguém precisa mirar o pódio olímpico, mas todo aluno, do bebê ao adulto que está vencendo o medo da água, chega mais longe quando alguém acredita no seu potencial. Qual é o seu próximo sonho na piscina?</p>
+                <p class="mb-0 mt-auto"><small class="text-muted"><i class="bi bi-link-45deg me-1"></i>Fonte: <a href="https://www.lance.com.br/lancepedia/michael-phelps-idade-medalhas-hoje.html" target="_blank" rel="noopener">lance.com.br</a></small></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12">
+        <article class="card shadow-sm overflow-hidden">
+          <div class="row g-0">
+            <div class="col-12 col-md-5 col-lg-4 bg-light d-flex align-items-center justify-content-center p-3 order-md-2">
+              <img src="img/post2-30minutos.png" class="img-fluid rounded post-img" alt="Nadadora vista de cima na piscina com o título: natação como atividade física, o que acontece no seu corpo em 30 minutos de aula">
+            </div>
+            <div class="col-12 col-md-7 col-lg-8 order-md-1">
+              <div class="card-body h-100 d-flex flex-column">
+                <h3 class="card-title h4 text-azul">Natação como atividade física: o que acontece no seu corpo em 30 minutos de aula</h3>
+                <p class="text-muted small mb-3">
+                  <i class="bi bi-person-circle me-1"></i>Por <strong>Camila Werner</strong>
+                  <i class="bi bi-calendar-event ms-3 me-1"></i>24/08/2026 às 14h00
+                </p>
+                <p class="card-text">Trinta minutos parecem pouco? Na água, não são. Já nas primeiras braçadas, o coração acelera e a circulação sanguínea aumenta, iniciando um trabalho cardiovascular comparável ao da corrida, com uma diferença importante: praticamente sem impacto nas articulações. Ao mesmo tempo, braços, pernas, abdômen e costas entram em ação juntos, porque na água todo movimento encontra resistência. É por isso que a natação é considerada um dos exercícios mais completos que existem.</p>
+                <p class="card-text">No decorrer da aula, o corpo libera endorfina, dopamina e serotonina, os neurotransmissores do bem-estar, o que explica aquela sensação de leveza e humor melhor ao sair da piscina. O controle da respiração exigido pelo nado também trabalha a musculatura respiratória e, com o tempo, aumenta a capacidade pulmonar. E tem o gasto calórico: mover o corpo na água exige muito mais energia do que em terra, então meia hora bem aproveitada queima na faixa de 250 a 300 calorias.</p>
+                <p class="card-text">O melhor de tudo: estudos indicam que treinos de 30 a 60 minutos, apenas duas vezes por semana, já trazem ganhos reais de condicionamento físico. Ou seja, a natação cabe na rotina de qualquer pessoa. Que tal reservar meia hora da sua semana para experimentar? A primeira aula na AquaVida é por nossa conta.</p>
+                <p class="mb-0 mt-auto"><small class="text-muted"><i class="bi bi-link-45deg me-1"></i>Fonte: <a href="https://www.cnnbrasil.com.br/saude/nadar-com-regularidade-pode-trazer-beneficios-para-o-corpo-e-a-mente/" target="_blank" rel="noopener">cnnbrasil.com.br</a></small></p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="py-5">
+  <div class="container">
+    <h2 class="text-azul mb-4"><i class="bi bi-envelope me-2"></i>Fale Conosco</h2>
+    <div class="row g-4">
+      <div class="col-12 col-lg-6">
+        <form>
+          <div class="mb-3">
+            <label for="contatoNome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="contatoNome" placeholder="Digite seu nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="contatoEmail" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="contatoEmail" placeholder="Digite seu e-mail" required>
+          </div>
+          <div class="mb-3">
+            <label for="contatoMensagem" class="form-label">Mensagem</label>
+            <textarea class="form-control" id="contatoMensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-azul"><i class="bi bi-send me-1"></i>Enviar</button>
+        </form>
+      </div>
+      <div class="col-12 col-lg-6">
+        <h5 class="text-azul">AquaVida Natação</h5>
+        <p class="mb-2"><i class="bi bi-envelope-fill text-azul me-2"></i>emerson.gustavo154@gmail.com</p>
+        <p class="mb-2"><i class="bi bi-telephone-fill text-azul me-2"></i>(49) 99929-1682</p>
+        <p class="mb-3">
+          <i class="bi bi-whatsapp text-success me-2"></i>
+          <a href="https://wa.me/5549999291682?text=Olá!%20Quero%20saber%20mais%20sobre%20as%20aulas%20da%20AquaVida." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        </p>
+        <h6>Redes sociais</h6>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="fs-3 me-3 text-azul" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="fs-3 me-3 text-azul" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="fs-3 text-azul" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer class="bg-azul text-white text-center py-4">
+  <div class="container">
+    <p class="mb-1"><i class="bi bi-water me-2"></i>AquaVida Natação - Mergulhe na sua melhor versão</p>
+    <p class="mb-0">Site desenvolvido por <strong>Emerson Gustavo Pobran Rodrigues</strong> - Fundamentos ao Desenvolvimento Web, Sistemas de Informação, UNOESC Chapecó.</p>
+  </div>
+</footer>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a href="https://wa.me/5549999291682?text=Olá!%20Quero%20saber%20mais%20sobre%20as%20aulas%20da%20AquaVida."
+   class="btn btn-success rounded-circle shadow whats-flutuante" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

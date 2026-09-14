@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natação para Adultos - AquaVida Natação</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    :root { --azul: #0077B6; --agua: #90E0EF; }
+    .bg-azul { background-color: var(--azul); }
+    .text-azul { color: var(--azul); }
+    .btn-azul { background-color: var(--azul); color: #fff; }
+    .btn-azul:hover { background-color: #005f92; color: #fff; }
+    .foto-servico { object-fit: cover; height: 300px; width: 100%; }
+    .whats-flutuante {
+      position: fixed; bottom: 24px; right: 24px; z-index: 1050;
+      width: 60px; height: 60px; font-size: 2rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+<!-- MENU PRINCIPAL -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-azul sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-water me-2"></i>AquaVida Natação</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#catalogo">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#empresa">A Empresa</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#depoimentos">Depoimentos</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+      <li class="breadcrumb-item"><a href="index.html#catalogo">Serviços</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Natação para Adultos</li>
+    </ol>
+  </nav>
+
+  <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <h1 class="text-azul mb-0">Natação para Adultos</h1>
+    <button type="button" class="btn btn-azul btn-lg" data-bs-toggle="modal" data-bs-target="#modalOrcamento">
+      <i class="bi bi-calculator me-1"></i>Orçamento
+    </button>
+  </div>
+
+  <p class="fs-3 fw-bold text-azul">R$ 169,90/mês</p>
+  <p class="lead">Turmas para quem nunca nadou, para quem quer aperfeiçoar a técnica dos quatro nados (crawl, costas, peito e borboleta) e para quem treina visando condicionamento físico ou provas de águas abertas. O aluno passa por avaliação de nível gratuita e evolui em etapas, sempre com acompanhamento próximo do professor.</p>
+
+  <!-- FOTOS DO SERVIÇO -->
+  <div class="row g-4 my-2">
+    <div class="col-12 col-md-6">
+      <figure class="figure w-100">
+        <img src="img/adultos-01.jpg" class="figure-img img-fluid rounded shadow-sm foto-servico" alt="Adulto nadando crawl em piscina">
+        <figcaption class="figure-caption">Turmas por nível: iniciante, intermediário e avançado</figcaption>
+      </figure>
+    </div>
+    <div class="col-12 col-md-6">
+      <figure class="figure w-100">
+        <img src="img/ricardo.jpg" class="figure-img img-fluid rounded shadow-sm foto-servico" alt="Professor Ricardo Fontana, diretor técnico da AquaVida">
+        <figcaption class="figure-caption">Professor Ricardo Fontana, diretor técnico e professor de natação</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- DETALHES (TABLE) -->
+  <h2 class="text-azul mt-4">Detalhes do serviço</h2>
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered align-middle">
+      <tbody>
+        <tr><th scope="row" class="w-25">Duração da aula</th><td>45 minutos</td></tr>
+        <tr><th scope="row" class="w-25">Frequência</th><td>2x ou 3x por semana</td></tr>
+        <tr><th scope="row" class="w-25">Dias de atendimento</th><td>Segunda a sexta</td></tr>
+        <tr><th scope="row" class="w-25">Horários</th><td>6h, 7h, 12h, 18h30, 19h30 e 20h30</td></tr>
+        <tr><th scope="row" class="w-25">Turma</th><td>Máximo 6 alunos por professor</td></tr>
+        <tr><th scope="row" class="w-25">Informações adicionais</th><td>Avaliação de nível gratuita na primeira aula</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- VÍDEO (IFRAME) -->
+  <h2 class="text-azul mt-4">Veja como funciona</h2>
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div class="ratio ratio-16x9 rounded shadow-sm overflow-hidden mb-4">
+        <iframe src="https://www.youtube.com/embed/2ucdvLUp3kA" title="Vídeo sobre Natação para Adultos"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <a href="index.html" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i>Voltar à página principal</a>
+</div>
+
+<!-- MODAL DE ORÇAMENTO -->
+<div class="modal fade" id="modalOrcamento" tabindex="-1" aria-labelledby="modalOrcamentoTitulo" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header bg-azul text-white">
+        <h5 class="modal-title" id="modalOrcamentoTitulo"><i class="bi bi-calculator me-2"></i>Solicitar orçamento - Natação para Adultos</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row g-3">
+            <div class="col-12 col-md-6">
+              <label for="orcNome" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="orcNome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="orcEmail" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="orcEmail" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="orcTelefone" class="form-label">Telefone</label>
+              <input type="tel" class="form-control" id="orcTelefone" placeholder="(49) 90000-0000" required>
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="orcEndereco" class="form-label">Endereço</label>
+              <input type="text" class="form-control" id="orcEndereco" placeholder="Rua, número e bairro">
+            </div>
+            <div class="col-12 col-md-6">
+              <label for="orcCidade" class="form-label">Cidade</label>
+              <input type="text" class="form-control" id="orcCidade" placeholder="Sua cidade">
+            </div>
+            <div class="col-6 col-md-2">
+              <label for="orcUf" class="form-label">UF</label>
+              <select class="form-select" id="orcUf">
+                <option selected>SC</option>
+                <option>PR</option><option>RS</option><option>SP</option><option>RJ</option>
+                <option>MG</option><option>MS</option><option>MT</option><option>GO</option>
+                <option>DF</option><option>ES</option><option>BA</option><option>SE</option>
+                <option>AL</option><option>PE</option><option>PB</option><option>RN</option>
+                <option>CE</option><option>PI</option><option>MA</option><option>PA</option>
+                <option>AP</option><option>AM</option><option>RR</option><option>RO</option>
+                <option>AC</option><option>TO</option>
+              </select>
+            </div>
+            <div class="col-6 col-md-4">
+              <label for="orcData" class="form-label">Data desejada</label>
+              <input type="date" class="form-control" id="orcData">
+            </div>
+            <div class="col-12">
+              <label for="orcObs" class="form-label">Observações</label>
+              <textarea class="form-control" id="orcObs" rows="3" placeholder="Conte mais sobre o que você precisa"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-azul"><i class="bi bi-send me-1"></i>Enviar solicitação</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RODAPÉ -->
+<footer class="bg-azul text-white text-center py-4">
+  <div class="container">
+    <p class="mb-1"><i class="bi bi-water me-2"></i>AquaVida Natação - Mergulhe na sua melhor versão</p>
+    <p class="mb-0">Site desenvolvido por <strong>Emerson Gustavo Pobran Rodrigues</strong> - Fundamentos ao Desenvolvimento Web, Sistemas de Informação, UNOESC Chapecó.</p>
+  </div>
+</footer>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a href="https://wa.me/5549999291682?text=Olá!%20Quero%20um%20orçamento%20de%20Nata%C3%A7%C3%A3o%20para%20Adultos."
+   class="btn btn-success rounded-circle shadow whats-flutuante" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
