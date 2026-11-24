@@ -1,38 +1,29 @@
--- AquaVida Natação — script de criação do banco de dados
--- Como usar: phpMyAdmin > aba "Importar" > escolher este arquivo
-
--- Cria o banco (se ainda não existir) com suporte a acentos (utf8mb4)
 CREATE DATABASE IF NOT EXISTS aquavida
   DEFAULT CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
--- Seleciona o banco para criar as tabelas dentro dele
 USE aquavida;
 
--- Apaga as tabelas se ja existirem (permite importar o script de novo do zero)
 DROP TABLE IF EXISTS orcamentos;
 DROP TABLE IF EXISTS contatos;
 DROP TABLE IF EXISTS depoimentos;
 
 
--- Tabela ORCAMENTOS: pedidos de orçamento feitos nas paginas
--- de serviço (servico1.html, servico2.html, servico3.html)
 CREATE TABLE orcamentos (
-  id            INT AUTO_INCREMENT PRIMARY KEY,       -- numero unico gerado automaticamente
-  servico       VARCHAR(100) NOT NULL,                -- nome do serviço (ex.: Hidroginastica)
+  id            INT AUTO_INCREMENT PRIMARY KEY,
+  servico       VARCHAR(100) NOT NULL,
   nome          VARCHAR(100) NOT NULL,
   email         VARCHAR(150) NOT NULL,
   telefone      VARCHAR(20)  NOT NULL,
   endereco      VARCHAR(200),
   cidade        VARCHAR(100),
   uf            CHAR(2),
-  data_desejada DATE,                                 -- pode ficar vazia (NULL)
+  data_desejada DATE,
   observacoes   TEXT,
-  data_envio    TIMESTAMP DEFAULT CURRENT_TIMESTAMP   -- preenchida sozinha com a data/hora do envio
+  data_envio    TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 
--- Tabela CONTATOS: mensagens do formulario "Fale Conosco" (index)
 CREATE TABLE contatos (
   id         INT AUTO_INCREMENT PRIMARY KEY,
   nome       VARCHAR(100) NOT NULL,
@@ -42,7 +33,6 @@ CREATE TABLE contatos (
 );
 
 
--- Tabela DEPOIMENTOS: depoimentos exibidos na pagina inicial
 CREATE TABLE depoimentos (
   id         INT AUTO_INCREMENT PRIMARY KEY,
   nome       VARCHAR(100) NOT NULL,
@@ -51,7 +41,6 @@ CREATE TABLE depoimentos (
 );
 
 
--- Depoimentos iniciais (os 5 que estavam fixos no HTML do index)
 INSERT INTO depoimentos (nome, texto) VALUES
 ('Fernanda Baldissera',
  'Minha filha começou na turma de bebês com 8 meses e hoje, com 4 anos, já nada sozinha. A paciência e o carinho da professora Camila fizeram toda a diferença!'),

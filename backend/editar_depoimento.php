@@ -1,12 +1,6 @@
 <?php
-// editar_depoimento.php
-// Recebe o id, o nome e o texto de um depoimento ja existente
-// e atualiza (UPDATE) esse depoimento na tabela depoimentos.
-
-// Avisa que a resposta deste arquivo e JSON
 header("Content-Type: application/json; charset=utf-8");
 
-// Conecta no banco (cria a variavel $conexao)
 require "conexao.php";
 
 $id    = $_POST["id"];

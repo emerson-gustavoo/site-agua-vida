@@ -1,12 +1,6 @@
 <?php
-// salvar_orcamento.php
-// Recebe os dados do modal de orçamento (servico1/2/3.html),
-// enviados pelo JavaScript, e grava na tabela orcamentos.
-
-// Avisa que a resposta deste arquivo e JSON
 header("Content-Type: application/json; charset=utf-8");
 
-// Conecta no banco (cria a variavel $conexao)
 require "conexao.php";
 
 $servico      = $_POST["servico"];
